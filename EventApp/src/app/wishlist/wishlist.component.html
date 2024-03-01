@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="form-group" style="margin:2% 20% 2% 20%; width:60%;">
+        <div class="input-group mb-3 inputcontainer">
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="sear" (ngModelChange)="OnSearch($event)">
+            <span class="input-group-text" style="background-color: #e504fa;"> <i class="fa fa-search text-white fa-lg "></i></span>
+        </div>
+    </div>
+<div class="row" style="margin:2px 0 2px 0;">
+    <div class=" col col-sm-12 col-md-6 col-lg-4" *ngFor="let n of Eventlist">
+    <mat-card class="example-card">
+        <mat-card-header>
+        <mat-card-title style="color:#e504fa">{{n.short_title}}</mat-card-title>
+        
+        <mat-card-subtitle style="color:black">Type- {{n.type}}</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+        <img  mat-card-image src="{{n.performers[0].image}}" alt="Image coming soon..." >
+        <p style="color:black">
+            <span style="color:#e504fa">PublishedAt:</span> &nbsp;  {{n.visible_at| date:'dd-MMM-yyyy hh:mm a':'GMT'}}
+        </p>
+        <p style="color:black">
+            <span style="color:#e504fa"> Datetime_UTC: </span>&nbsp;{{n.datetime_utc| date:'dd-MMM-yyyy hh:mm a':'GMT'}}
+        </p>
+        <p style="color:black">
+            <span style="color:#e504fa">Venue:</span> <br>
+            {{n.venue.name}}, {{n.venue.address}}, {{n.venue.city}}, {{n.venue.state}}, {{n.venue.country}}
+        </p>
+        <!-- <span style="color:#e504fa">Performers:</span><div *ngFor="let m of n.performers">
+        <p style="color: black;">{{m.name}},</p></div> -->
+        
+    </mat-card-content>
+    <mat-card-actions >
+            <button class="btn btn-outline-danger" (click)="deletefromwishlist(n.id)" id="deletebtn" mat-button>
+                <fa-icon [icon]="faTrash" size="lg" >
+                </fa-icon> &nbsp;Remove from Wishlist</button>
+        </mat-card-actions>
+    
+    </mat-card>
+    </div>
+    </div>
+</div>

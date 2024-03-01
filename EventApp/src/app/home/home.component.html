@@ -1,0 +1,39 @@
+<div class="container-fluid shadow p-3 mb-5 rounded" style="border-radius:10px; width:80%; background-color:#e504fa; margin-top: 3%; margin-left:10%; margin-right: 10%; padding:10px; opacity: 0.8; ">
+<h1 style="text-align:center;">Welcome <span style="color:white;" *ngIf="userName===''">To Our Event Hub</span><span *ngIf="userName!==''" style="color:white;">{{userName}}</span></h1>
+</div>
+<div class="container-fluid">
+<img class="img-fluid  rounded" src=".\assets\loginimg.jpg" alt="Image Coming Soon..." />
+</div>
+<div class="container-fluid">
+<h3 style="margin:20px 0 20px 20px;">Upcoming Events....</h3>
+<div class="row" style="margin:2px 0 2px 0;">
+<div class=" col col-sm-12 col-md-6 col-lg-4" style="margin-bottom:2%;" *ngFor="let n of Eventlist">
+<mat-card class="example-card shadow">
+    <mat-card-header>
+    <mat-card-title style="color:#e504fa">{{n.short_title}}</mat-card-title>    
+    <mat-card-subtitle style="color:black">Type- {{n.type}}</mat-card-subtitle>
+</mat-card-header>
+    <mat-card-content>
+        <img  mat-card-image src="{{n.performers[0].image}}" alt="Image coming soon..." >
+        <p style="color:black">
+            <span style="color:#e504fa">PublishedAt:</span> &nbsp;  {{n.visible_at| date:'dd-MMM-yyyy hh:mm a':'GMT'}}
+        </p>
+        <p style="color:black">
+            <span style="color:#e504fa"> Datetime_UTC: </span>&nbsp;{{n.datetime_utc| date:'dd-MMM-yyyy hh:mm a':'GMT'}}
+        </p>
+        <p style="color:black">
+            <span style="color:#e504fa">Venue:</span> <br>
+            {{n.venue.name}}, {{n.venue.address}}, {{n.venue.city}}, {{n.venue.state}}, {{n.venue.country}}
+        </p>
+        <span style="color:#e504fa">Performers:</span><div *ngFor="let m of n.performers">
+        <p style="color: black;">{{m.name}},</p></div>        
+    </mat-card-content>
+    <mat-card-actions >
+        <button class="btn btn-outline-success" id="wishlistbtn" (click)="Addtowishlist(n)" mat-button>
+            <fa-icon [icon]="faPlus" size="lg" >
+        </fa-icon>&nbsp; Add to Wishlist </button>
+    </mat-card-actions>
+</mat-card>
+</div>
+</div>
+</div>

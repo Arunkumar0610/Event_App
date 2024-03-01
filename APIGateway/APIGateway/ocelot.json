@@ -1,0 +1,86 @@
+{
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:5000",
+        "ServiceDiscoveryProvider": {
+            "Host": "localhost",
+            "Port": 8500,
+            "Type": "Consul"
+        }
+    },
+    "Routes": [
+        {
+            "UpstreamPathTemplate": "/gateway/Users/byname/{userName}",
+            "UpstreamHttpMethod": [ "Get" ],
+            "DownstreamPathTemplate": "/api/Users/byname/{userName}",
+            "DownstreamScheme": "https",
+            "ServiceName": "UserProfileService"
+            
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Users/{id}",
+            "UpstreamHttpMethod": [ "Get" ],
+            "DownstreamPathTemplate": "/api/Users/{id}",
+            "DownstreamScheme": "https",
+            "ServiceName": "UserProfileService"
+            
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Users",
+            "UpstreamHttpMethod": [ "Post" ],
+            "DownstreamPathTemplate": "/api/Users/",
+            "DownstreamScheme": "https",
+            "ServiceName": "UserProfileService"
+            //"AuthenticationOptions": {
+            //    "AuthenticationProviderKey": "Bearer",
+            //    "AllowedScopes": []
+            // }
+
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Authenticate/login",
+            "UpstreamHttpMethod": [ "Post" ],
+            "DownstreamPathTemplate": "/api/Authenticate/login",
+            "DownstreamScheme": "https",
+            "ServiceName": "UserAuthenticationService"
+            //"AuthenticationOptions": {
+            //    "AuthenticationProviderKey": "Bearer",
+            //    "AllowedScopes": []
+           // }
+              
+            
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Events",
+            "UpstreamHttpMethod": [ "Get" ],
+            "DownstreamPathTemplate": "/api/Events",
+            "DownstreamScheme": "https",
+            "ServiceName": "EventService"
+            
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Events/{id}",
+            "UpstreamHttpMethod": [ "Get" ],
+            "DownstreamPathTemplate": "/api/Events/{id}",
+            "DownstreamScheme": "https",
+            "ServiceName": "EventService"
+            
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Wishlist/{userName}",
+            "UpstreamHttpMethod": [ "Get", "Post" ],
+            "DownstreamPathTemplate": "/api/Wishlist/{userName}",
+            "DownstreamScheme": "https",
+            "ServiceName": "WishlistService"
+            
+        },
+        {
+            "UpstreamPathTemplate": "/gateway/Wishlist/{userName}/{eventid}",
+            "UpstreamHttpMethod": [ "Delete" ],
+            "DownstreamPathTemplate": "/api/Wishlist/{userName}/{eventid}",
+            "DownstreamScheme": "https",
+            "ServiceName": "WishlistService"
+
+        }
+
+    ]
+}

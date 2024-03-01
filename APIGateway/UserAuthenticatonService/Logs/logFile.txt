@@ -1,0 +1,251 @@
+12/25/2023 12:35:09 Registering with Consul
+12/25/2023 12:35:18 kafka Consumer is running in background on topic= testdata
+12/25/2023 12:35:18 kafka Consumer started recieving messages from kafka producer
+12/25/2023 12:37:25 Login User
+12/25/2023 12:37:28 HTTP "POST" "/api/Authenticate/login" responded 200 in 3015.4999 ms
+12/25/2023 12:40:50 Registering with Consul
+12/25/2023 12:40:51 kafka Consumer is running in background on topic= testdata
+12/25/2023 12:40:51 kafka Consumer started recieving messages from kafka producer
+12/25/2023 12:41:25 Login User
+12/25/2023 12:41:29 HTTP "POST" "/api/Authenticate/login" responded 200 in 4200.1621 ms
+12/25/2023 13:52:53 Registering with Consul
+12/25/2023 13:52:54 kafka Consumer is running in background on topic= testdata
+12/25/2023 13:52:54 kafka Consumer started recieving messages from kafka producer
+12/25/2023 14:01:03 Registering with Consul
+12/25/2023 14:01:04 kafka Consumer is running in background on topic= testdata
+12/25/2023 14:01:04 kafka Consumer started recieving messages from kafka producer
+12/26/2023 11:47:49 Registering with Consul
+12/26/2023 11:47:57 kafka Consumer is running in background on topic= testdata
+12/26/2023 11:47:57 kafka Consumer started recieving messages from kafka producer
+12/26/2023 11:51:08 Login User
+12/26/2023 11:51:14 HTTP "POST" "/api/Authenticate/login" responded 200 in 6700.7765 ms
+12/26/2023 11:59:14 Login User
+12/26/2023 11:59:18 HTTP "POST" "/api/Authenticate/login" responded 200 in 3235.8619 ms
+12/26/2023 12:06:27 Registering with Consul
+12/26/2023 12:06:28 kafka Consumer is running in background on topic= testdata
+12/26/2023 12:06:28 kafka Consumer started recieving messages from kafka producer
+12/26/2023 12:08:10 Registering with Consul
+12/26/2023 12:08:11 kafka Consumer is running in background on topic= testdata
+12/26/2023 12:08:11 kafka Consumer started recieving messages from kafka producer
+12/26/2023 12:09:59 Registering with Consul
+12/26/2023 12:10:00 kafka Consumer is running in background on topic= testdata
+12/26/2023 12:10:00 kafka Consumer started recieving messages from kafka producer
+12/26/2023 12:10:30 Login User
+12/26/2023 12:10:35 HTTP "POST" "/api/Authenticate/login" responded 200 in 4949.0449 ms
+12/26/2023 12:17:05 Login User
+12/26/2023 12:17:08 HTTP "POST" "/api/Authenticate/login" responded 200 in 3186.7205 ms
+12/26/2023 12:25:40 Login User
+12/26/2023 12:25:43 HTTP "POST" "/api/Authenticate/login" responded 200 in 3257.5962 ms
+12/26/2023 12:28:14 Login User
+12/26/2023 12:28:16 HTTP "POST" "/api/Authenticate/login" responded 200 in 1115.5141 ms
+12/26/2023 12:33:56 Login User
+12/26/2023 12:33:59 HTTP "POST" "/api/Authenticate/login" responded 200 in 3163.7457 ms
+12/26/2023 12:44:50 Login User
+12/26/2023 12:44:53 HTTP "POST" "/api/Authenticate/login" responded 200 in 2915.4421 ms
+12/26/2023 13:06:22 Login User
+12/26/2023 13:06:25 HTTP "POST" "/api/Authenticate/login" responded 200 in 3073.0262 ms
+12/26/2023 13:07:22 Login User
+12/26/2023 13:07:23 HTTP "POST" "/api/Authenticate/login" responded 500 in 520.9544 ms
+Azure.RequestFailedException: The specified queue does not exist.
+RequestId:47987ead-f003-0058-42fc-379a52000000
+Time:2023-12-26T13:07:23.3959737Z
+Status: 404 (The specified queue does not exist.)
+ErrorCode: QueueNotFound
+
+Content:
+<?xml version="1.0" encoding="utf-8"?><Error><Code>QueueNotFound</Code><Message>The specified queue does not exist.
+RequestId:47987ead-f003-0058-42fc-379a52000000
+Time:2023-12-26T13:07:23.3959737Z</Message></Error>
+
+Headers:
+Server: Windows-Azure-Queue/1.0,Microsoft-HTTPAPI/2.0
+x-ms-request-id: 47987ead-f003-0058-42fc-379a52000000
+x-ms-version: 2018-11-09
+x-ms-error-code: QueueNotFound
+Date: Tue, 26 Dec 2023 13:07:23 GMT
+Content-Length: 217
+Content-Type: application/xml
+
+   at Azure.Storage.Queues.MessagesRestClient.EnqueueAsync(QueueMessage queueMessage, Nullable`1 visibilitytimeout, Nullable`1 messageTimeToLive, Nullable`1 timeout, CancellationToken cancellationToken)
+   at Azure.Storage.Queues.QueueClient.SendMessageInternal(BinaryData message, Nullable`1 visibilityTimeout, Nullable`1 timeToLive, Boolean async, CancellationToken cancellationToken, String operationName)
+   at Azure.Storage.Queues.QueueClient.SendMessageAsync(String messageText, Nullable`1 visibilityTimeout, Nullable`1 timeToLive, CancellationToken cancellationToken)
+   at Azure.Storage.Queues.QueueClient.SendMessageAsync(String messageText)
+   at UserAuthenticatonService.Controllers.AuthenticateController.LogToQueue(String username) in C:\Users\VMAdmin\EventAppUseCase\eventapp\APIGateway\UserAuthenticatonService\Controllers\AuthenticateController.cs:line 48
+   at UserAuthenticatonService.Controllers.AuthenticateController.UserLogin(Login login) in C:\Users\VMAdmin\EventAppUseCase\eventapp\APIGateway\UserAuthenticatonService\Controllers\AuthenticateController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+12/26/2023 13:07:23 An unhandled exception has occurred while executing the request.
+Azure.RequestFailedException: The specified queue does not exist.
+RequestId:47987ead-f003-0058-42fc-379a52000000
+Time:2023-12-26T13:07:23.3959737Z
+Status: 404 (The specified queue does not exist.)
+ErrorCode: QueueNotFound
+
+Content:
+<?xml version="1.0" encoding="utf-8"?><Error><Code>QueueNotFound</Code><Message>The specified queue does not exist.
+RequestId:47987ead-f003-0058-42fc-379a52000000
+Time:2023-12-26T13:07:23.3959737Z</Message></Error>
+
+Headers:
+Server: Windows-Azure-Queue/1.0,Microsoft-HTTPAPI/2.0
+x-ms-request-id: 47987ead-f003-0058-42fc-379a52000000
+x-ms-version: 2018-11-09
+x-ms-error-code: QueueNotFound
+Date: Tue, 26 Dec 2023 13:07:23 GMT
+Content-Length: 217
+Content-Type: application/xml
+
+   at Azure.Storage.Queues.MessagesRestClient.EnqueueAsync(QueueMessage queueMessage, Nullable`1 visibilitytimeout, Nullable`1 messageTimeToLive, Nullable`1 timeout, CancellationToken cancellationToken)
+   at Azure.Storage.Queues.QueueClient.SendMessageInternal(BinaryData message, Nullable`1 visibilityTimeout, Nullable`1 timeToLive, Boolean async, CancellationToken cancellationToken, String operationName)
+   at Azure.Storage.Queues.QueueClient.SendMessageAsync(String messageText, Nullable`1 visibilityTimeout, Nullable`1 timeToLive, CancellationToken cancellationToken)
+   at Azure.Storage.Queues.QueueClient.SendMessageAsync(String messageText)
+   at UserAuthenticatonService.Controllers.AuthenticateController.LogToQueue(String username) in C:\Users\VMAdmin\EventAppUseCase\eventapp\APIGateway\UserAuthenticatonService\Controllers\AuthenticateController.cs:line 48
+   at UserAuthenticatonService.Controllers.AuthenticateController.UserLogin(Login login) in C:\Users\VMAdmin\EventAppUseCase\eventapp\APIGateway\UserAuthenticatonService\Controllers\AuthenticateController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+12/26/2023 13:07:33 Login User
+12/26/2023 13:07:34 HTTP "POST" "/api/Authenticate/login" responded 500 in 569.5007 ms
+Azure.RequestFailedException: The specified queue does not exist.
+RequestId:47989351-f003-0058-72fc-379a52000000
+Time:2023-12-26T13:07:34.3746657Z
+Status: 404 (The specified queue does not exist.)
+ErrorCode: QueueNotFound
+
+Content:
+<?xml version="1.0" encoding="utf-8"?><Error><Code>QueueNotFound</Code><Message>The specified queue does not exist.
+RequestId:47989351-f003-0058-72fc-379a52000000
+Time:2023-12-26T13:07:34.3746657Z</Message></Error>
+
+Headers:
+Server: Windows-Azure-Queue/1.0,Microsoft-HTTPAPI/2.0
+x-ms-request-id: 47989351-f003-0058-72fc-379a52000000
+x-ms-version: 2018-11-09
+x-ms-error-code: QueueNotFound
+Date: Tue, 26 Dec 2023 13:07:33 GMT
+Content-Length: 217
+Content-Type: application/xml
+
+   at Azure.Storage.Queues.MessagesRestClient.EnqueueAsync(QueueMessage queueMessage, Nullable`1 visibilitytimeout, Nullable`1 messageTimeToLive, Nullable`1 timeout, CancellationToken cancellationToken)
+   at Azure.Storage.Queues.QueueClient.SendMessageInternal(BinaryData message, Nullable`1 visibilityTimeout, Nullable`1 timeToLive, Boolean async, CancellationToken cancellationToken, String operationName)
+   at Azure.Storage.Queues.QueueClient.SendMessageAsync(String messageText, Nullable`1 visibilityTimeout, Nullable`1 timeToLive, CancellationToken cancellationToken)
+   at Azure.Storage.Queues.QueueClient.SendMessageAsync(String messageText)
+   at UserAuthenticatonService.Controllers.AuthenticateController.LogToQueue(String username) in C:\Users\VMAdmin\EventAppUseCase\eventapp\APIGateway\UserAuthenticatonService\Controllers\AuthenticateController.cs:line 48
+   at UserAuthenticatonService.Controllers.AuthenticateController.UserLogin(Login login) in C:\Users\VMAdmin\EventAppUseCase\eventapp\APIGateway\UserAuthenticatonService\Controllers\AuthenticateController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+12/26/2023 13:07:34 An unhandled exception has occurred while executing the request.
+Azure.RequestFailedException: The specified queue does not exist.
+RequestId:47989351-f003-0058-72fc-379a52000000
+Time:2023-12-26T13:07:34.3746657Z
+Status: 404 (The specified queue does not exist.)
+ErrorCode: QueueNotFound
+
+Content:
+<?xml version="1.0" encoding="utf-8"?><Error><Code>QueueNotFound</Code><Message>The specified queue does not exist.
+RequestId:47989351-f003-0058-72fc-379a52000000
+Time:2023-12-26T13:07:34.3746657Z</Message></Error>
+
+Headers:
+Server: Windows-Azure-Queue/1.0,Microsoft-HTTPAPI/2.0
+x-ms-request-id: 47989351-f003-0058-72fc-379a52000000
+x-ms-version: 2018-11-09
+x-ms-error-code: QueueNotFound
+Date: Tue, 26 Dec 2023 13:07:33 GMT
+Content-Length: 217
+Content-Type: application/xml
+
+   at Azure.Storage.Queues.MessagesRestClient.EnqueueAsync(QueueMessage queueMessage, Nullable`1 visibilitytimeout, Nullable`1 messageTimeToLive, Nullable`1 timeout, CancellationToken cancellationToken)
+   at Azure.Storage.Queues.QueueClient.SendMessageInternal(BinaryData message, Nullable`1 visibilityTimeout, Nullable`1 timeToLive, Boolean async, CancellationToken cancellationToken, String operationName)
+   at Azure.Storage.Queues.QueueClient.SendMessageAsync(String messageText, Nullable`1 visibilityTimeout, Nullable`1 timeToLive, CancellationToken cancellationToken)
+   at Azure.Storage.Queues.QueueClient.SendMessageAsync(String messageText)
+   at UserAuthenticatonService.Controllers.AuthenticateController.LogToQueue(String username) in C:\Users\VMAdmin\EventAppUseCase\eventapp\APIGateway\UserAuthenticatonService\Controllers\AuthenticateController.cs:line 48
+   at UserAuthenticatonService.Controllers.AuthenticateController.UserLogin(Login login) in C:\Users\VMAdmin\EventAppUseCase\eventapp\APIGateway\UserAuthenticatonService\Controllers\AuthenticateController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+12/26/2023 13:10:31 Login User
+12/26/2023 13:10:34 HTTP "POST" "/api/Authenticate/login" responded 200 in 3014.1184 ms
+12/26/2023 13:31:10 Registering with Consul
+12/26/2023 13:31:12 kafka Consumer is running in background on topic= testdata
+12/26/2023 13:31:12 kafka Consumer started recieving messages from kafka producer
+12/26/2023 13:32:06 Login User
+12/26/2023 13:32:11 HTTP "POST" "/api/Authenticate/login" responded 200 in 5112.7863 ms
+12/26/2023 13:42:58 Login User
+12/26/2023 13:43:01 HTTP "POST" "/api/Authenticate/login" responded 200 in 3113.0064 ms
+12/26/2023 14:00:56 Registering with Consul
+12/26/2023 14:01:00 kafka Consumer is running in background on topic= testdata
+12/26/2023 14:01:00 kafka Consumer started recieving messages from kafka producer
+12/26/2023 14:01:36 Login User
+12/26/2023 14:01:41 HTTP "POST" "/api/Authenticate/login" responded 200 in 5358.0845 ms
+12/26/2023 14:03:40 Login User
+12/26/2023 14:03:41 HTTP "POST" "/api/Authenticate/login" responded 200 in 1261.2190 ms
+12/26/2023 14:45:13 Registering with Consul
+12/26/2023 14:45:13 kafka Consumer is running in background on topic= testdata
+12/26/2023 14:45:13 kafka Consumer started recieving messages from kafka producer
+12/26/2023 14:46:58 Login User
+12/26/2023 14:47:02 HTTP "POST" "/api/Authenticate/login" responded 200 in 4914.1694 ms
+12/26/2023 15:01:36 Registering with Consul
+12/26/2023 15:01:37 kafka Consumer is running in background on topic= testdata
+12/26/2023 15:01:37 kafka Consumer started recieving messages from kafka producer
+12/26/2023 15:02:35 Login User
+12/26/2023 15:02:39 HTTP "POST" "/api/Authenticate/login" responded 200 in 4911.3506 ms
+12/26/2023 15:06:52 Login User
+12/26/2023 15:06:53 HTTP "POST" "/api/Authenticate/login" responded 200 in 1249.0215 ms
+12/26/2023 15:21:53 Registering with Consul
+12/26/2023 15:21:54 kafka Consumer is running in background on topic= testdata
+12/26/2023 15:21:54 kafka Consumer started recieving messages from kafka producer
+12/26/2023 15:23:58 Login User
+12/26/2023 15:24:03 HTTP "POST" "/api/Authenticate/login" responded 200 in 5103.5604 ms
+12/26/2023 15:29:51 Login User
+12/26/2023 15:29:53 HTTP "POST" "/api/Authenticate/login" responded 200 in 1226.8047 ms
+12/26/2023 15:39:41 Login User
+12/26/2023 15:39:44 HTTP "POST" "/api/Authenticate/login" responded 200 in 2975.0868 ms

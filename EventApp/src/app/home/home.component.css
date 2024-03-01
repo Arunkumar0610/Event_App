@@ -1,0 +1,19 @@
+.example-card{
+    height:100%;
+    width: auto;
+    border: 0.5px solid #e504fa ;
+}
+   
+#wishlistbtn{
+    position:absolute;
+    bottom:2%;
+    width:96%;
+}
+#message{
+    position: fixed;
+    margin-top:5%;
+    top:0%;
+    right:0;
+    width:auto;
+    z-index: 9999;
+} 

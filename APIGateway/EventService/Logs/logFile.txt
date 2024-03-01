@@ -1,0 +1,50 @@
+12/25/2023 12:40:48 Registering with Consul
+12/25/2023 12:42:29 Fetching All Events from SeatGeek Event External Api
+12/25/2023 12:42:31 HTTP "GET" "/api/Events" responded 200 in 2772.6817 ms
+12/25/2023 13:52:51 Registering with Consul
+12/25/2023 13:53:20 Fetching All Events from SeatGeek Event External Api
+12/25/2023 13:53:22 HTTP "GET" "/api/Events" responded 200 in 1756.5301 ms
+12/26/2023 05:17:51 Registering with Consul
+12/26/2023 05:20:50 Registering with Consul
+12/26/2023 05:21:00 Fetching All Events from SeatGeek Event External Api
+12/26/2023 05:21:02 HTTP "GET" "/api/Events" responded 200 in 1779.2542 ms
+12/26/2023 05:26:00 Registering with Consul
+12/26/2023 05:26:53 Fetching All Events from SeatGeek Event External Api
+12/26/2023 05:26:53 HTTP "GET" "/api/Events" responded 200 in 816.8847 ms
+12/26/2023 05:34:49 Fetching All Events from SeatGeek Event External Api
+12/26/2023 05:34:50 HTTP "GET" "/api/Events" responded 200 in 508.7939 ms
+12/26/2023 05:34:57 Fetching All Events from SeatGeek Event External Api
+12/26/2023 05:34:57 HTTP "GET" "/api/Events" responded 200 in 76.4261 ms
+12/26/2023 05:40:02 Fetching All Events from SeatGeek Event External Api
+12/26/2023 05:40:04 HTTP "GET" "/api/Events" responded 200 in 1477.5988 ms
+12/26/2023 11:47:20 Registering with Consul
+12/26/2023 11:47:47 Registering with Consul
+12/26/2023 11:48:21 Fetching All Events from SeatGeek Event External Api
+12/26/2023 11:48:23 HTTP "GET" "/api/Events" responded 200 in 2162.9770 ms
+12/26/2023 11:51:15 Fetching All Events from SeatGeek Event External Api
+12/26/2023 11:51:16 HTTP "GET" "/api/Events" responded 200 in 704.9048 ms
+12/26/2023 11:59:19 Fetching All Events from SeatGeek Event External Api
+12/26/2023 11:59:21 HTTP "GET" "/api/Events" responded 200 in 1805.5605 ms
+12/26/2023 12:06:25 Registering with Consul
+12/26/2023 12:08:09 Registering with Consul
+12/26/2023 12:09:57 Registering with Consul
+12/26/2023 12:10:36 Fetching All Events from SeatGeek Event External Api
+12/26/2023 12:10:37 HTTP "GET" "/api/Events" responded 200 in 736.3384 ms
+12/26/2023 12:17:09 Fetching All Events from SeatGeek Event External Api
+12/26/2023 12:17:10 HTTP "GET" "/api/Events" responded 200 in 598.3200 ms
+12/26/2023 12:28:17 Fetching All Events from SeatGeek Event External Api
+12/26/2023 12:28:17 HTTP "GET" "/api/Events" responded 200 in 677.9490 ms
+12/26/2023 12:34:00 Fetching All Events from SeatGeek Event External Api
+12/26/2023 12:34:02 HTTP "GET" "/api/Events" responded 200 in 1737.0865 ms
+12/26/2023 12:44:54 Fetching All Events from SeatGeek Event External Api
+12/26/2023 12:44:56 HTTP "GET" "/api/Events" responded 200 in 1972.2970 ms
+12/26/2023 13:06:26 Fetching All Events from SeatGeek Event External Api
+12/26/2023 13:06:27 HTTP "GET" "/api/Events" responded 200 in 791.4184 ms
+12/26/2023 13:10:36 Fetching All Events from SeatGeek Event External Api
+12/26/2023 13:10:36 HTTP "GET" "/api/Events" responded 200 in 623.4449 ms
+12/26/2023 13:31:07 Registering with Consul
+12/26/2023 14:00:56 Registering with Consul
+12/26/2023 14:01:42 Fetching All Events from SeatGeek Event External Api
+12/26/2023 14:01:43 HTTP "GET" "/api/Events" responded 200 in 1150.1218 ms
+12/26/2023 14:03:42 Fetching All Events from SeatGeek Event External Api
+12/26/2023 14:03:44 HTTP "GET" "/api/Events" responded 200 in 1257.5313 ms

@@ -1,0 +1,72 @@
+
+
+<div class="container-fluid shadow">
+<div class="row ">
+<div class="card col-12 col-lg-6" id="card_image">
+ <img class="card-img" src=".\assets\signupimg.jpg" alt="Image Coming Soon..."/>
+</div>
+<div class="card  col-12 col-lg-6" id="signupcard">
+        <div class="card-body ">
+            <h1 class="text3" >SignUp</h1>
+            <form  [formGroup]="form"  (ngSubmit)="UserRegistration()" novalidate>
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-2" ><label for="name">Name:</label></div>
+                <div class="col-12 col-md-8 col-lg-10"><input class="form-control" [class.is-invalid]="name?.invalid" id="name" placeholder="Name" type="text" formControlName="name" required>
+                    <div *ngIf="name?.invalid && (name?.touched ||name?.dirty)">
+                        <small class="text-danger" *ngIf="name?.errors?.['required']">Name is required</small>
+                       
+                        <small class="text-danger" *ngIf="name?.errors?.['maxlength']">Name must have atmost 25characters only</small>
+                    </div><br></div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-2" ><label for="username">Username:</label></div>
+                <div class="col-12 col-md-8 col-lg-10"><input class="form-control" [class.is-invalid]="username?.invalid" id="username" placeholder="Username" type="text" formControlName="username" required>
+                    <div *ngIf="username?.invalid && (username?.touched ||username?.dirty)">
+                        <small class="text-danger" *ngIf="username?.errors?.['required']">Username is required</small>
+                    </div><br></div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-2" ><label for="password">Password:</label></div>
+                <div class="col-12 col-md-8 col-lg-10"><input class="form-control" [class.is-invalid]="password?.invalid" id="password" placeholder="Password" type="password" formControlName="password" required>
+                    <div *ngIf="password?.invalid && (password?.touched ||password?.dirty)">
+                        <small class="text-danger" *ngIf="password?.errors?.['required']">Password is required</small>
+                        <small class="text-danger" *ngIf="password?.errors?.['pattern']">Password must contain total atleast 8 to 15 characters atmost and must contain atleast one uppercase,one lowercase,one number, and one special character</small>
+                    </div><br></div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-2" ><label for="confirmpassword">Confirm Password:</label></div>
+                <div class="col-12 col-md-8 col-lg-10"><input class="form-control" [class.is-invalid]="confirmpassword?.invalid" id="confirmpassword" placeholder="Confirm Password" type="password" formControlName="confirmpassword" required>
+                    <div *ngIf="confirmpassword?.invalid && (confirmpassword?.touched ||confirmpassword?.dirty)">
+                        <small class="text-danger" *ngIf="confirmpassword?.errors?.['required']">ConfirmPassword is required</small>
+                        <small class="text-danger" *ngIf="confirmpassword?.errors?.['pattern']">ConfirmPassword must contain total atleast 8 to 15 characters atmost and must contain atleast one uppercase,one lowercase,one number, and one special character</small>
+                        </div><br>
+                    <div *ngIf=" password?.valid && confirmpassword?.touched">
+                        <small class="text-danger" *ngIf="confirmpassword!.value!=password!.value" >Password and ConfirmPassword are not matched</small>
+                        <small class="text-success" *ngIf="confirmpassword!.value==password!.value">Password and ConfirmPassword are  matched</small>    
+                    </div></div>
+            </div>
+            <div class="row" >
+                <div class="col-12 col-md-4 col-lg-2" ><label for="email">Email:</label></div>
+                <div class="col-12 col-md-8 col-lg-10"><input class="form-control" [class.is-invalid]="email?.invalid" id="email" placeholder="Email Address" type="email" formControlName="email" required>
+                    <div *ngIf="email?.invalid && (email?.touched ||email?.dirty)">
+                        <small class="text-danger" *ngIf="email?.errors?.['required']">Email is required</small>
+                        <small class="text-danger" *ngIf="email?.errors?.['email']">Please provide valid email address</small>
+                    </div><br></div>
+            </div>
+            <div class="row" >
+                <div class="col-12 col-md-4 col-lg-2" ><label for="contact">Contact:</label></div>
+                <div class="col-12 col-md-8 col-lg-10"><input class="form-control" [class.is-invalid]="contact?.invalid" id="contact" placeholder="contact" type="text" formControlName="contact" required>
+                    <div *ngIf="contact?.invalid && (contact?.touched ||contact?.dirty)">
+                        <small class="text-danger" *ngIf="contact?.errors?.['required']">Contact is required</small>
+                        <small class="text-danger" *ngIf="contact?.errors?.['pattern']">Please provide valid PhoneNumber</small>
+                    </div></div>
+            </div>
+            <div class="row" style="margin-top: 2%;">
+                <button class="btn btn-dark col-12" style="background-color: #aa2ab6; border-color:#aa2ab6 ;  width:50%; position: relative; left:32%; " type="submit" [disabled]="!form.valid" >Submit</button>
+                <p class="col-12" style="margin-top: 2%;" >Do you already have an Account ? &nbsp;<a class="link" style="color:#aa2ab6; border-color:#aa2ab6 ;  " [routerLink]="['/login']">Login here</a></p>
+            </div>
+        </form>
+        </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,12 @@
+12/25/2023 12:40:49 Registering with Consul
+12/25/2023 12:42:53 Getting user By userName
+12/25/2023 12:42:58 HTTP "GET" "/api/Users/byname/Arun123" responded 200 in 6163.1423 ms
+12/25/2023 13:52:52 Registering with Consul
+12/25/2023 14:01:04 Registering with Consul
+12/26/2023 11:47:22 Registering with Consul
+12/26/2023 11:47:48 Registering with Consul
+12/26/2023 12:06:26 Registering with Consul
+12/26/2023 12:08:10 Registering with Consul
+12/26/2023 12:09:58 Registering with Consul
+12/26/2023 13:31:08 Registering with Consul
+12/26/2023 14:00:56 Registering with Consul
